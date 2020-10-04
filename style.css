@@ -125,15 +125,15 @@ splashpage
     justify-content: center;
     height: 100vh;
     width: 100%;
-    background: rgba(51, 51, 51, 0.7);
+    background: rgba(51, 51, 51, 0.4);
 }
 
 .video-container {
-    position: absolute;
+    position: absolute; 
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -2;
+    z-index: -1;
 }
 
 .video-container::after {
@@ -143,8 +143,8 @@ splashpage
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: -1;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -2;
 }
 
 #title h1 {
@@ -524,5 +524,9 @@ responsive
         font-size: 1rem;
         letter-spacing: var(--spacing-narrow);
 
+    }
+
+    #title-logo {
+        width: 55px;
     }
 }

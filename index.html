@@ -5,6 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sDotLabs</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <script src="https://kit.fontawesome.com/47118a0994.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -40,10 +44,11 @@
     <main id="main">
         <!-- start splashpage -->
         <section class="landing">
-            <video class="video-container" muted autoplay>
-                <!-- <source src="./video.mp4" type="video/mp4" /> -->
-                <iframe class="video-container" src="https://www.youtube.com/embed/aRy4h0SIljo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
-            </video>
+            <div class="video-container">
+                <img class="video-container" src="bbfalls.gif" alt="bb falling">
+                <!-- <source src="./video.mp4" type="video/mp4" />
+                <iframe class="video-container" src="https://www.youtube.com/embed/aRy4h0SIljo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe> -->
+            </div>
             <div id="title">
                 <h1>sDotLabs<span><img id="title-logo" src="sDotLabsNavLogo.svg" alt="logo" class="logo" /></span>Development</h1>
             </div>
@@ -97,7 +102,7 @@
                 <h2>&lt projects &gt</h2>
                 <div class="underline"></div>
             </div>
-            
+
             <!-- filter buttons -->
             <div class="btn-container">
             </div>
@@ -110,24 +115,24 @@
                 <div class="underline"></div>
             </div>
             <div class="codelinks-container">
-            <div class="codelink">
-                <a href="https://github.com/scroft13" target="_blank" class="link btn">
-                    <i class="fab fa-github"></i>GitHub</a>
+                <div class="codelink">
+                    <a href="https://github.com/scroft13" target="_blank" class="link btn">
+                        <i class="fab fa-github"></i>GitHub</a>
+                </div>
+                <div class="codelink">
+                    <a href="https://codepen.io/scroft13/pens/" target="_blank" class="link btn">
+                        <i class="fab fa-codepen"></i>CodePen</a>
+                </div>
             </div>
-            <div class="codelink">
-                <a href="https://codepen.io/scroft13/pens/" target="_blank" class="link btn">
-                    <i class="fab fa-codepen"></i>CodePen</a>
             </div>
-            </div>
-        </div>
         </section>
         <!-- end projects section -->
         <!-- start blog section -->
         <section id="blog">
             <h4 class="subtitle">blog</h4>
         </section>
-        
-        <iframe class="video-container" src="https://www.youtube.com/embed/aRy4h0SIljo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe>
+
+
         <!-- end blog section -->
 
         <!-- start contact section -->
@@ -138,7 +143,7 @@
             </div>
             <div class="contact-links">
                 <div class="contact-details">
-                    <a href="https://twitter.com/scroft13" target="_blank" class="link btn">
+                    <a href="https://twitter.com/sdotlabs" target="_blank" class="link btn">
                         <i class="fab fa-twitter"></i> Twitter</a>
                 </div>
                 <div class="contact-details">
