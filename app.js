@@ -29,16 +29,15 @@ const project = [{
         id: 1,
         title: "Tribute Page",
         category: "HTML/CSS",
-        link: "Portfolio/index.html",
-        linkdesc: "Link",
+        link: "Portfolio/HTMLProjects/Tribute/tribute.html",
         img: "imgs/tributePreview.png",
         desc: "A practice begining website, I decided to do a tribute to Tribute, the song by Tenacious D. This was the first part of the freeCodeCamp.org HTML/CSS certificate.",
     },
     {
         id: 2,
-        title: "Pointless Survey",
+        title: "Unnescessary",
         category: "HTML/CSS",
-        link: "",
+        link: "Portfolio/HTMLProjects/UnnescessarySurvey/survey.html",
         linkdesc: "Link",
         img: "imgs/surveyPreview.png",
         desc: `I wanted to learn a little about forms and how they work, but wasn't sure what to make a survey of. I present - The Pointless Survey. Part 2 of the freeCodeCamp HTML/CSS certificate.`,
@@ -89,7 +88,7 @@ const project = [{
         category: "JavaScript",
         link: "Portfolio/JS Projects/menu(dynamic)/menuDynamic.html",
         img: "imgs/menupreview.png",
-        desc: "An interactive menu for a fictitious restraunt."
+        desc: "An interactive menu for a fictitious restraunt. All menu items, as well as the menu button labels, are loaded from an array of objects."
 
     }
 ];
