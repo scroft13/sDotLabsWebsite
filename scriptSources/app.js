@@ -90,6 +90,13 @@ const project = [{
         img: "imgs/menupreview.png",
         desc: "An interactive menu for a fictitious restraunt. All menu items, as well as the menu button labels, are loaded from an array of objects."
 
+    }, 
+    {
+        title: "Random Quote Generator",
+        category: "React",
+        link: "https://stoic-murdock-c13ebc.netlify.app/",
+        img: "imgs/randompreview.png",
+        desc: "Random Quote Box, developed using Meact and the material-ui library. Pulls quote from a prefined .JSON github page."
     }
 ];
 
