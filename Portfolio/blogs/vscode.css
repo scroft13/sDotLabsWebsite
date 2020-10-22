@@ -1,0 +1,43 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+#root {
+    background: whitesmoke;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #333;
+}
+.logo-container {
+  
+    width: 95%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo{
+    max-width: 400px;
+    max-height: 400px;
+    animation: spin 5s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@media screen and (max-width: 400px) {
+    #logo{
+        max-width: 200px;
+        max-height: 200px;
+    }
+}

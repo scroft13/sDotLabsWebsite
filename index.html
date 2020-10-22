@@ -10,7 +10,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <script src="https://kit.fontawesome.com/47118a0994.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/nav.css" />
+    <link rel="stylesheet" href="styles/splash.css" />
+    <link rel="stylesheet" href="styles/about.css" />
+    <link rel="stylesheet" href="styles/projects.css" />
+    <link rel="stylesheet" href="styles/blog.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+
 </head>
 
 <body>
@@ -50,7 +58,8 @@
                 <iframe class="video-container" src="https://www.youtube.com/embed/aRy4h0SIljo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe> -->
             </div>
             <div id="title">
-                <h1>sDotLabs<span><img id="title-logo" src="sDotLabsNavLogo.svg" alt="logo" class="logo" /></span>Development</h1>
+                <h1>sDotLabs<span><img id="title-logo" src="sDotLabsNavLogo.svg" alt="logo"
+                            class="logo" /></span>Development</h1>
             </div>
         </section>
         <!-- end splash -->
@@ -66,7 +75,9 @@
                     </button>
                 </div>
                 <div class="about-text" id="storysofar">
-                    <p>Where to start? Well, I was born in Spokane, Washington to a loving family and all that. My family moved to the Idaho Falls area soon after that where I was raised and went to school. I graduated from Rigby High School, and have seen many expereiences since. </p>
+                    <p>Where to start? Well, I was born in Spokane, Washington to a loving family and all that. My
+                        family moved to the Idaho Falls area soon after that where I was raised and went to school. I
+                        graduated from Rigby High School, and have seen many expereiences since. </p>
                 </div>
                 <!-- start certifications -->
             </article>
@@ -82,7 +93,8 @@
                         <p>Responsive Web Design
                             Developer Certification</p>
                         <div class="cert">
-                            <a href="https://www.freecodecamp.org/certification/scroft13/responsive-web-design" target="_blank">Certification</a>
+                            <a href="https://www.freecodecamp.org/certification/scroft13/responsive-web-design"
+                                target="_blank"><img src="imgs/htmlcertpreview.png" alt="html cert"></a>
                         </div>
 
                     </div>
@@ -90,7 +102,8 @@
                         <p>JavaScript Algorithms and Data Structures
                             Developer Certification</p>
                         <div class="cert">
-                            <a href="https://www.freecodecamp.org/certification/scroft13/javascript-algorithms-and-data-structures" target="_blank">Certification</a>
+                            <a href="https://www.freecodecamp.org/certification/scroft13/javascript-algorithms-and-data-structures"
+                                target="_blank"><img src="imgs/jscertpreview.png" alt="js cert"></a>
                         </div>
 
                     </div>
@@ -98,7 +111,7 @@
             </article>
 
             <!-- start resume -->
-            <article class="about-container" id="resume">
+            <!-- <article class="about-container" id="resume">
                 <div class="about-box">
                     <p class="about-box-title">Resume &#60----&#62 CV</p>
                     <button type="button" class="about-btn">
@@ -108,12 +121,12 @@
                 <div class="about-text">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias culpa quibusdam magnam, laboriosam accusamus eaque suscipit asperiores aliquid fugiat expedita beatae aperiam placeat, natus quia aliquam, molestiae aut id mollitia dolorum ducimus assumenda in! Magni temporibus, dolorem quibusdam incidunt beatae eos dolore magnam corporis maiores perspiciatis autem necessitatibus nobis labore saepe esse deserunt ea quaerat facere mollitia tenetur? Adipisci animi quisquam possimus numquam architecto, ad inventore, doloremque tempore delectus autem harum itaque, debitis aut dignissimos aliquid sequi vero sunt alias mollitia est. Unde illo, sed nisi eius fugiat voluptatum atque quibusdam error dolor suscipit iste veniam, maxime quae ducimus et?</p>
                 </div>
-            </article>
+            </article> -->
         </section>
         <!-- end about section -->
         <!-- start projects section -->
         <section id="projects">
-            <div class="projects-title">
+            <div class="title" id="projects-title">
                 <h2>&lt projects &gt</h2>
                 <div class="underline"></div>
             </div>
@@ -122,10 +135,10 @@
             <div class="btn-container">
             </div>
             <!-- project container -->
-            <div class="section-center">
+            <div class="project-center">
             </div>
             <!-- Bottom Links -->
-            <div class="projects-title">
+            <div class="title">
                 <h2>&lt code links &gt</h2>
                 <div class="underline"></div>
             </div>
@@ -139,12 +152,54 @@
                         <i class="fab fa-codepen"></i>CodePen</a>
                 </div>
             </div>
-            </div>
+
         </section>
         <!-- end projects section -->
         <!-- start blog section -->
         <section id="blog">
-            <h4 class="subtitle">blog</h4>
+            <div class="title" id="blog-title">
+                <h2>&lt blog &gt</h2>
+                <div class="underline"></div>
+            </div>
+
+            <!-- filter buttons -->
+            <div class="btn-container2">
+            </div>
+            <!-- project container -->
+            <div class="blog-center">
+            </div>
+            <!-- <article class="blog-card" id="vs-code-theme-blog">
+                <h2 class="blog-post-title">How to create your own VS Code Theme</h2>
+                <p class="blog-text" id="vsc-theme-text">
+                    If, like me, you are never really happy with someone else's idea of what your screen should look like, the idea that I can take someone else's functionality, give it my own tweak so that it looks just like I think it should look, with the colors that catch my eye. And the more that you are working in a text editor day in and day out, it definitely helps to know what colors are associated with which elements of the code, so when you are scanning the screen your eyes can look for certain colors if you are looking for certain elements. And it has a certain aesthetic appeal as well. While the documention over at <a href="">the VS Code website</a> was a big help, I did find that I had to jump through a couple different sites to find all the information that I was looking for. So this is intended to be a complete beginners guide to creating your own VS Code theme. As a note, while I am pretty sure that doing this would be the same on a Windows or Linux Machine, I am using the Mac OS and so all the instructions will obviously be for the Mac.
+                    <br><br>
+                    To get started you just
+                </p>
+            </article>
+            <article class="blog-card" id="vs-code-theme-blog2">
+                <h2 class="blog-post-title">How to create your own VS Code Theme 2</h2>
+                <p class="blog-text" id="vsc-theme-text2">
+                    If, like me, you are never really happy with someone else's idea of what your screen should look like, the idea that I can take someone else's functionality, give it my own tweak so that it looks just like I think it should look, with the colors that catch my eye. And the more that you are working in a text editor day in and day out, it definitely helps to know what colors are associated with which elements of the code, so when you are scanning the screen your eyes can look for certain colors if you are looking for certain elements. And it has a certain aesthetic appeal as well. While the documention over at <a href="">the VS Code website</a> was a big help, I did find that I had to jump through a couple different sites to find all the information that I was looking for. So this is intended to be a complete beginners guide to creating your own VS Code theme. As a note, while I am pretty sure that doing this would be the same on a Windows or Linux Machine, I am using the Mac OS and so all the instructions will obviously be for the Mac.
+                    <br><br>
+                    To get started you just
+                </p>
+            </article>
+            <article class="blog-card" id="vs-code-theme-blog3">
+                <h2 class="blog-post-title">How to create your own VS Code Theme 3</h2>
+                <p class="blog-text" id="vsc-theme-text3">
+                    If, like me, you are never really happy with someone else's idea of what your screen should look like, the idea that I can take someone else's functionality, give it my own tweak so that it looks just like I think it should look, with the colors that catch my eye. And the more that you are working in a text editor day in and day out, it definitely helps to know what colors are associated with which elements of the code, so when you are scanning the screen your eyes can look for certain colors if you are looking for certain elements. And it has a certain aesthetic appeal as well. While the documention over at <a href="">the VS Code website</a> was a big help, I did find that I had to jump through a couple different sites to find all the information that I was looking for. So this is intended to be a complete beginners guide to creating your own VS Code theme. As a note, while I am pretty sure that doing this would be the same on a Windows or Linux Machine, I am using the Mac OS and so all the instructions will obviously be for the Mac.
+                    <br><br>
+                    To get started you just
+                </p>
+            </article>
+            <article class="blog-card" id="vs-code-theme-blog4">
+                <h2 class="blog-post-title">How to create your own VS Code Theme 4</h2>
+                <p class="blog-text" id="vsc-theme-text4">
+                    If, like me, you are never really happy with someone else's idea of what your screen should look like, the idea that I can take someone else's functionality, give it my own tweak so that it looks just like I think it should look, with the colors that catch my eye. And the more that you are working in a text editor day in and day out, it definitely helps to know what colors are associated with which elements of the code, so when you are scanning the screen your eyes can look for certain colors if you are looking for certain elements. And it has a certain aesthetic appeal as well. While the documention over at <a href="">the VS Code website</a> was a big help, I did find that I had to jump through a couple different sites to find all the information that I was looking for. So this is intended to be a complete beginners guide to creating your own VS Code theme. As a note, while I am pretty sure that doing this would be the same on a Windows or Linux Machine, I am using the Mac OS and so all the instructions will obviously be for the Mac.
+                    <br><br>
+                    To get started you just
+                </p>
+            </article> -->
         </section>
 
 
@@ -157,7 +212,7 @@
             </div>
             <div class="contact-section-header">
                 <h2>Let's work together...</h2>
-                <p>How do you want to connect?</p>#0d65c4
+                <p>How do you want to connect?</p>
             </div>
             <div class="contact-links">
                 <div class="contact-details">
@@ -169,19 +224,20 @@
                         <i class="fab fa-facebook"></i> Facebook</a>
                 </div>
                 <div class="contact-details">
-                    <a href="mailto:admin@sdotlabs.com" target="_blank" class="link btn">
+                    <a href="mailto:shaun@sdotlabs.com" target="_blank" class="link btn">
                         <i class="fas fa-at"></i> Email</a>
                 </div>
                 <div class="contact-details">
                     <a href="tel:206-832-5631" target="_blank" class="link btn">
                         <i class="fas fa-mobile"></i> Call Me</a>
                 </div>
-            </div>∏
+            </div>
         </section>
         <!--Begin footer -->
         <footer>
             <div class="foot-info">
-                <p id="legalinfo">Legal Info could go here. Or <a href="https://www.youtube.com/watch?v=uqo5RYOp4nQ" target="_blank" class="link">a cool &lt;link to some good legal info.&gt;</a>
+                <p id="legalinfo">Legal Info could go here. Or <a href="https://www.youtube.com/watch?v=uqo5RYOp4nQ"
+                        target="_blank" class="link">a cool &lt;link to some good legal info.&gt;</a>
                 </p>
             </div>
             <div class="foot-info">
@@ -193,12 +249,12 @@
 
         </footer>
         <script src="scriptSources/app.js"></script>
-        <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+        <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> -->
 
 
 
-        <script type="module" src="scriptSources/index.js"></script>
+        <!-- <script type="module" src="scriptSources/index.js"></script> -->
 
     </main>
 </body>

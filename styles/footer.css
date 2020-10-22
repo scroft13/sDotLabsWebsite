@@ -1,0 +1,75 @@
+/* 
+=====================
+footer
+===================== 
+*/
+
+footer {
+    display: flex;
+    background-color: var(--dark-gray);
+    box-shadow: 0px -2px 5px 0px rgba(255, 255, 0, 1);
+    height: 7vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#copyright {
+    padding: 0 25px 0 0;
+    color: white;
+}
+
+#legalinfo {
+    padding: 0 0 0 25px;
+    color: white;
+}
+
+/* 
+=====================
+responsive
+===================== 
+*/
+
+
+
+@media screen and (max-width: 850px) {
+    #title h1 {
+        font-size: 1.5rem;
+        letter-spacing: var(--spacing-medium);
+
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #title h1 {
+        font-size: 1rem;
+        letter-spacing: var(--spacing-narrow);
+
+    }
+
+    #title-logo {
+        width: 55px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .project-item {
+        grid-template-columns: 225px 1fr;
+        gap: 0 1.25rem;
+        max-width: 40rem;
+    }
+
+    .photo {
+        height: 175px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .section-center {
+        width: 95vw;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .photo {
+        height: 150px;
+    }
+} 
