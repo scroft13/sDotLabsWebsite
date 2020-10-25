@@ -12,51 +12,60 @@ blog
     width: 100%;
     min-height: 100vh;
 }
-.blog-center{
+
+.blog-center {
     display: flex;
     align-content: center;
     justify-content: center;
 }
-.blog-card{
+
+.blog-card {
     padding: 10px;
     margin: 10px;
-    /* background: var(--light-gray);
-    border: 1px solid var(--dark-gray); */
-    width: 66.6%;
-    /* box-shadow:         1px 6px 6px 0px rgba(0, 0, 0, 0.66); */
-    /* border-radius: var(--radius); */
     display: flex;
     flex-direction: column;
-
-
 }
-.blog-title{
+
+.blog-title h4 {
+    word-spacing: var(--spacing-medium);
     align-self: center;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
 }
-.blog-info{
+
+.blog-info {
     padding-top: 15px;
     display: flex;
-    width: 750px;
-    height: 150px;
-  
+    width: 550px;
+    height: 110px;
+    
 }
+
 .blog-description {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 25px;
+    height: 110 px;
+    overflow: hidden;
 }
 
 .blog-photo {
-        align-self: flex-start;
-        object-fit: cover;
-        height: 150px;
-        width: 150px;
-       
+    align-self: flex-start;
+    object-fit: cover;
+    height: 100px;
+    width: 100px;
 }
 
 .blog-link {
     align-self: flex-end;
+    transition: .3s ease;
+}
+
+.blog-link:hover {
+    color: var(--cyan);
+    letter-spacing: var(--spacing-medium);
 }
 
 #vs-code-theme-blog {
@@ -66,9 +75,11 @@ blog
 #vs-code-theme-blog4 {
     grid-area: d;
 }
+
 #vs-code-theme-blog3 {
     grid-area: c;
 }
+
 #vs-code-theme-blog2 {
     grid-area: b;
 }

@@ -1,0 +1,70 @@
+{
+  "workbench.colorCustomizations": {
+    // set first
+    "sideBar.background": "#F5F5F5",
+    "sideBar.border": "#002244",
+    // Activity Bar
+    "activityBar.background": "#002244",
+    "activityBar.foreground": "#33ff33",
+    "activityBarBadge.background": "#33ff33",
+    "activityBarBadge.foreground": "#002244",
+    "badge.background": "#33ff33",
+    //icon colors in the side bar
+    "icon.foreground": "#003087",
+    "selection.background": "#33ff33",
+    //font color when a new window opens
+    "descriptionForeground": "#333333",
+    //Buttons
+    "button.background": "#002244",
+    "button.foreground": "#F5F5F5",
+    //Drop it like it's hot
+    "dropdown.background": "#F5F5F5",
+    "dropdown.foreground": "#333333",
+    "dropdown.border": "#002244",
+    "dropdown.listBackground": "#F5F5F5",
+    //window borders
+    "window.inactiveBorder": "#33ff33",
+    "window.activeBorder": "#F5F5F5",
+    //Status Bar
+    "statusBar.background": "#002244",
+    "statusBar.foreground": "#F5F5F5",
+    "statusBar.noFolderBackground": "#33ff33",
+    "statusBar.noFolderForeground": "#333333",
+    //Title Bar
+    "titleBar.activeBackground": "#002244",
+    "titleBar.activeForeground": "#F5F5F5", //Tabs
+    "tab.activeBackground": "#002244",
+    "tab.activeForeground": "#33ff33",
+    "tab.inactiveBackground": "#F5F5F5",
+    "tab.inactiveForeground": "#333",
+    "tab.border": "#002244",
+    "editorGroup.border": "#002244",
+    "editorGroupHeader.border": "#002244",
+    "editorGroupHeader.tabsBorder": "#002244",
+    //Git Info
+    "gitDecoration.addedResourceForeground": "#33ff33",
+    "gitDecoration.modifiedResourceForeground": "#ffb029",
+    "gitDecoration.untrackedResourceForeground": "#69BE28",
+    "gitDecoration.deletedResourceForeground": "#ff0000",
+    //Panel
+    "panel.background": "#F5F5F5",
+    "terminal.background": "#000",
+    "terminal.foreground": "#33ff33",
+    "terminal.selectionBackground": "#fff",
+    //Extensions Buttons
+    "extensionButton.prominentBackground": "#33ff33",
+    "extensionButton.prominentForeground": "#002244"
+  },
+  "editor.tokenColorCustomizations": {
+    "comments": "#a1a1a1",
+    "textMateRules": [
+      //html textmate rules
+      {
+        "scope": "",
+        "settings": {
+          "foreground": "#ff0ffb"
+        }
+      }
+    ]
+  }
+}

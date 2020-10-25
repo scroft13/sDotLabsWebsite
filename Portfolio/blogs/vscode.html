@@ -1,19 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>How To Create a VS Code Theme</title>
     <link rel="stylesheet" href="vscode.css" />
-    
-</head>
-<body>
-    <div id="root">
-        <h1 class="title">Under Construction</h1>
-        <div class="logo-container">
-            <img id="logo" src="sDotLabsCrazyLogo.png" alt="spining logo">
+    <link rel="stylesheet" href="styles/nav.css" />
+  </head>
+
+  <body>
+    <!-- start navbar -->
+    <header class="header">
+      <ul class="navbar">
+        <div class="logo">
+          <img src="sDotLabsNavLogo.svg" alt="logo" class="logo" />
         </div>
-        <h2 class="subtitle">Another sDotLabs Development is on the way</h2>
-    </div>
-</body>
+        <div class="links-container">
+          <li class="nav-btn">
+            <a class="link" href="https://www.sdotlabs.com/index.html#main">home</a>
+          </li>
+          <li class="nav-btn">
+            <a class="link" href="https://www.sdotlabs.com/index.html#about">about</a>
+          </li>
+          <li class="nav-btn">
+            <a class="link" href="https://www.sdotlabs.com/index.html#projects">projects</a>
+          </li>
+          <li class="nav-btn">
+            <a class="link" href="https://www.sdotlabs.com/index.html#blog">blog</a>
+          </li>
+          <li class="nav-btn">
+            <a class="link" href="https://www.sdotlabs.com/index.html#contact">contact</a>
+          </li>
+        </div>
+      </ul>
+    </header>
+    <!-- end navbar -->
+
+    <article>
+      <div class="title">
+        <h1>How To Create A VS Code Theme</h1>
+      </div>
+      <div class="byline">
+        <h3 class="author">
+          <em> Words haphazardly arranged into sentences by Shaun Croft</em>
+        </h3>
+        <image src="" class="todo author-image"></image>
+      </div>
+      <div class="blog-article">
+        <p>
+          If, like me, you are never really happy with someone else's idea of
+          what your screen should look like, the idea that I can take someone
+          else's functionality, give it my own tweak so that it looks just like
+          I think it should look, with the colors that catch my eye. And the
+          more that you are working in a text editor day in and day out, it
+          definitely helps to know what colors are associated with which
+          elements of the code, so when you are scanning the screen your eyes
+          can look for certain colors if you are looking for certain elements.
+          And it has a certain aesthetic appeal as well. While the documentation
+          over at
+          <a href="https://code.visualstudio.com/docs/getstarted/themes" target=
+          "_blank"class="link">the VS Code website</a> was a big help, I did
+          find that I have to jump through a couple different sites to find all
+          the information that I was looking for. So this is intended to be a
+          complete beginners guide to creating your own VS Code theme. As a
+          note, while I am pretty sure that doing this would be the same on a
+          Windows or Linux Machine, I am using the Mac OS and so all the
+          instructions will obviously be for the Mac.
+        </p>
+        <br />
+
+        <p>
+          Before you get started, I would highly recommend the extensions “Color
+          Manager” by Roy Action, and Bracket Pair Colorizer 2, by CoenraadS.
+          The Color Manager extension is extremely useful for this. You can
+          create a palette to store all the colors you would like to use, and it
+          makes it easy to switch out the colors to see what the affects are.
+          The Bracket Pair Colorizer just makes your brackets nice and colorful,
+          which I like.
+        </p>
+        <br />
+        <h2>Part 1 _ Overriding the Current Settings File</h2>
+        <br />
+        <p>
+          The easiest way to get started is to open your settings.json file on
+          with VS Code. Open VS Code and open a folder or workspace that has
+          your latest project. It doesn’t matter what it is, but you will want
+          something with all the different type of files that you normally work
+          on. Once that is done, launch your Finder, types ‘settings.json’ into
+          the search field, and then find the settings.json file that has the
+          following path:
+        </p>
+        <br />
+        <div class="code">
+          $HOME/Library/ApplicationSupport/Code/User/settings.json
+        </div>
+        <br />
+        <p>
+          When you click on a file, you can see the path in the bottom bar so
+          that you know you are opening the correct one. Open that file with VS
+          Code, it should add it to your current workspace, and it’s time to get
+          started. See the clip below for help.
+        </p>
+        <br />
+        <image src="blogimages/gif1.gif" class="gif"></image><br />
+        <p>
+          First, choose a theme that is similar to one that you would like to
+          build - i.e. if you are building a dark theme, start with a dark
+          theme, if you are building a light theme - start with a light theme.
+          Launch the color theme picker with ⌘K ⌘T, choose one to model yours
+          off of and it’s time to get started. I have decided to do a light
+          colored theme, and am starting with the Light (Visual Studio), to get
+          started with.
+        </p>
+        <br />
+        <p>
+          If you have a wide enough screen to split VS into three panes, I found
+          that to be a big time saver, with whatever language I was working on
+          in the first pane, the settings.json file in the middle, and the Color
+          Manager palette on the far right. Next, open up every pane or window
+          within VS that you can - at the top of the screen fo to View >
+          Appearance and click on everything that says “show” that is not
+          currently checked. It is also probably best not to do it in
+          full-screen so you can see changes to things like the Title Bar.
+        </p>
+        <br />
+        <image
+          class="still-image"
+          src="blogimages/everything open.png"
+          alt="all windows open with 3 panes"
+        ></image><br />
+        <p>
+          To change any element, you just add
+          <span class="span-code">“workbench.colorCustomizations”</span>
+          followed by a colon and an open set of curly brackets. Inside the
+          curly brackets you would select whatever element that you are trying
+          to style, and the color that you want it to become. It does only
+          accept colors in RGB Hex Values, so make sure that you aren’t using
+          like an HSLA or anything.
+        </p>
+        <br />
+
+        <p>
+          The first items that I would recommend changing are the sidebar and
+          the activity bar. For most items, you select the item with background
+          color with the “.background” and the font/icon color with the
+          “.foreground”. For example, the Activity Bar background is set with
+          <span class="span-code">“activityBar.background”</span> and the icon
+          colors are set with
+          <span class="span-code">“activityBar.foreground”</span>. The first
+          items that I recommend setting are your sidebar and activity bar. This
+          will help you get the base colors set that your theme will be based
+          on.
+        </p>
+        <br />
+
+        <image
+          alt="code image"
+          class="carbonizeCode"
+          src="blogimages/workbenchStart.png"
+        ></image>
+        <br /><br />
+
+        <p>
+          If you have everything setup as recommended, to change a color to see
+          how it will look, it is as easy as clicking on the color in the far
+          last tab.
+        </p>
+        <br />
+
+        <image
+          src="blogimages/actionbarstyling.gif"
+          alt="action bar styling gif"
+          class="gif"
+        ></image
+        ><br />
+
+        <p>
+          Once you have your initial colors set-up in your palette, it is as
+          easy as figuring our what element you want to change, targeting that
+          element in the settings.json file, and telling it what color you want.
+          You can check out all of the available elements that could be target
+          over at the VS Code documentation <a href="" class="todo"></a>There
+          are a lot of elements available. You can certainly just paste a
+          element in there and change the color and see what it does. VS Code
+          will automatically set the color to red so it is easy to spot. Theses
+          are the codes that I ended up using for my theme.
+        </p>
+        <br />
+
+        <image
+          class="carbonizeCode"
+          alt="carbonize code"
+          src="blogimages/workbenchFull.png"
+        ></image>
+        <br />
+        <br />
+        <p>
+          Once you have everything set up just the way you like for all the
+          elements, it’s time to get started with the actually words in the
+          editor itself. Instead of setting these with the
+          <span class="span-code">“workbench.colorCustomizations”</span> you set
+          these with
+          <span class="span-code">“editor.tokenColorCustomizations”</span>, but from
+          there it is similar. If you only want to set the base
+          variables, which will then be used by all the languages that use them,
+          you can do that. I recommend setting these first and you can then
+          override anything that doesn’t look right in the next section, the
+          Text Mates Rules section. To get started, if you wanted to set the
+          base comment color, it would look like this:
+        </p>
+        <br />
+        <image
+          class="carbonizeCode"
+          alt="carbonize code"
+          src="blogimages/editorToken.png"
+        ></image>
+        <br /><br />
+        <p>
+          Once you have set any base colors that you have set, you need to set
+          the TextMates this is a little bit more complex. To get started, you
+          set first tell your setting.json file that you are targeting the
+          TextMate rules and then, using the “scope” keyword, you target the
+          element you would like to change, and using the “foreground” keyword
+          you change the color. So to get it started it looks like this:
+        </p>
+        <br />
+
+        <image
+          class="carbonizeCode"
+          alt="carbonizeCode"
+          src="blogimages/editorToken2.png"
+        ></image>
+        <br />
+        <br />
+        <p>
+          Now all we need to do is figure out what element we want to change,
+          paste it into the scope, and then change the color to what we want. So
+          how do we do that? This is why we opened to some random project in the
+          begining. If you work with html files the most, start there. That’s
+          where we will start for this theme.
+        </p>
+        <br />
+
+        <p>
+          Let’s say we want to change inside the section tags. For example, if
+          we want to change the “div” inside of the &ltdiv&gt we would highlight
+          where it says “div” and then hit “⌃+⌥+⇧+I” on the keyboard. This will
+          bring up VS Codes element inspector and tells us what the TextMate
+          scope is. In the case of the div it will list
+          <span class="span-code">“entity.name.tag.html”</span>
+          as the first TextMate scope so this is the one that we will want to
+          use. Copy and then paste that into the scope section we created
+          earlier. Once we do that it will set it to the bright pink color we
+          have list in the foreground. Just choose the color you want and we are
+          done with that element. On to the next one.
+        </p>
+        <br />
+        <image src="blogimages/stylingEntityTag.gif" class="gif"></image>
+        <p>
+          <br />
+          Once you have set all your HTML elements like you want, the CSS
+          elements are largely the same. Where we get into trouble like this is
+          when you get into setting JavaScript elements. Because they use
+          Semantic styling, they don’t change quite as easily. For a further
+          read into what exactly that is, you can check out the documentation
+          <a href="https://code.visualstudio.com/api/language-extensions/semantic-highlight-guide" class="link">here</a>.
+        </p>
+        <br />
+
+        <p>
+          For our purposes, we will just turn off semantic editing and then we
+          can change the Javascript elements the same way we changed the HTML
+          and CSS before that. To do that, at the bottom of your setting.json
+          file(but inside the final curly bracket), just add:
+        </p>
+        <br />
+        <div class="code">
+          "editor.semanticTokenColorCustomizations": { "enabled": false }
+        </div>
+        <br />
+        <p>
+          Once that is done, we change up all the JavaScript elements you want,
+          as well as any other languages that you would like to edit the
+          appearance of. So that’s it, right?
+        </p>
+        <br />
+
+        <p>
+          By now everything should look just like you want your theme to look,
+          so you may be tempted to stop here. But we didn’t really create a
+          theme. We just overid what the base themes settings were. If you
+          change to a different color theme again, you will see, that not really
+          everything changes. Go ahead, I’ll wait. You may notice some changes,
+          but it isn’t working like it should be. In the next section, we will
+          use these setting to create the actual theme.
+        </p>
+        <br />
+
+        <h2>Part 2 _ Creating The Theme From Our Setting</h2>
+        <br />
+
+        <p>
+          The first thing we want to do is change the color theme back to the
+          theme we started with, in this case the Light (Visual Studio) theme,
+          and it’s time to create our theme. Bring up the Command Palette by
+          hitting “⌘+⇧+P”’ on your keyboard and start typing “Developer:
+          Generate Color Theme from Current setting.” Once you see it go ahead
+          and click on it to create an untitled JSON file of the settings you
+          just made. Go ahead and save it anywhere. It doesn’t matter where, we
+          will just need the info inside of it later.
+        </p>
+        <br />
+
+        <p>
+          Once that is done, we need to clear out all our rules in the
+          setting.json file, with the exception of the<span class="span-code">
+            "editor.semanticTokenColorCustomizations": {"enabled": false}
+          </span>
+          rule. Everything should go back to the way it started, with the base
+          theme that we started with. Now open up a Terminal window at the
+          bottom of VS Code with the “ ⌃ + ` ” keystroke. (Yes, that is a
+          backtick.)
+        </p>
+        <br />
+        <p>
+          If you haven’t used it already, install the Yeoman and VS Code
+          Extension Generator with:
+        </p>
+        <br />
+        <div class="code">% npm install -g yo generator-code</div>
+        <br />
+        <p>
+          Once that is done, we need to create the color theme with Yeoman. To
+          do that run:
+        </p>
+        <br />
+        <div class="code">% yo code</div>
+        <br />
+        <p>
+          Select “New Color Theme”, and then “No, start fresh.” Next, give it a
+          name. I recommend that it ends with “Color Theme.” For our example, we
+          will do “sDotLabs Light and Colorful Color Theme.” After that, for the
+          identifier, use the same name, just make sure it’s in lower case and
+          separated by hyphens. So, I’m going to use
+          sDotLabs-light-and-colorful-color-theme. Next type give it a nice
+          description, tell it what you want name you want displayed to the
+          user, select a base theme, and then choose wether or not to initialize
+          a git repo with it. That choice is entirely up to you, but I don’t see
+          the need for it for a color theme.
+        </p>
+        <br />
+
+        <p>
+          Once that is done, open up finder and navigate to whatever folder you
+          had opened to start the project. In that folder, it should have
+          created a new folder named with whatever identified you used in the
+          step above. In that folder should be another folder called “themes”
+          and inside of it there is a single file ending with -color-theme.json.
+          Open it with VS Code.
+        </p>
+        <br /><br />
+
+        <image src="blogimages/gif2.gif" class="gif" autoplay></image>
+        <br /><br />
+        <p>
+          Once in the file, delete everything from “type”:”light” to the end
+          closing bracket. This is where that untitled-JSON file that we created
+          earlier comes into play. Now copy everything in the JSON that we
+          created from the settings and paste it into your theme’s JSON file.
+          Save the file, quit VS Code and now your theme is done. One more task
+          left.
+        </p>
+        <br />
+
+        <p>
+          Now that our theme is created we need to put it in a place where VS
+          Code will look for it. Open up your finder again and move the entire
+          theme folder from whatever directory you were working in and move it
+          to .vscode > extensions. Note that any folder or file that starts with
+          a “.” Is a hidden folder and needs to be unhidden to find it. Just use
+          the keystroke “CMD + Shift + .” And it will show you all the hidden
+          files and folders. Use it again once you are done and you can hide the
+          files and folders again.
+        </p>
+        <br />
+
+        <p>
+          Now fire up VS Code once again, hit ⌘K ⌘T, and you should see your
+          theme in the Color Theme Picker list. Give yourself a nice pat on the
+          back, refill your coffee and then it’s time to buckle down. That
+          code’s not going to write itself. At least for another couple years.
+        </p>
+        <br />
+      </div>
+    </article>
+  </body>
 </html>

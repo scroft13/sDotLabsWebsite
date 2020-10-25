@@ -182,7 +182,7 @@ const blogpreview = [
         link: "Portfolio/blogs/vscode.html",
         linkdesc: "Read More",
         img: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/1920px-Visual_Studio_Code_1.35_icon.svg.png",
-        desc: `If, like me, you are never really happy with someone else's idea of what your screen should look like, the idea that I can take someone else's functionality, give it my own tweak so that it looks just like I think it should look, with the colors that catch my eye. And the more that you are working in a text editor day in and day out, it definitely helps to know what colors are associated with which elements of the code, so when you are scanning the screen your eyes can look for certain colors if you are looking for certain elements.`,
+        desc: `A complete beginners guide to creating your own VS Code theme on the Mac OS.`,
     }
 ]
 function displayBlogItems(blogItems) {
@@ -195,13 +195,14 @@ function displayBlogItems(blogItems) {
             <div class="blog-info">
                 <img class="blog-photo" src=${item.img} alt=${item.title}/>     
                 <div class="blog-description">
-                    <div class="blog-text>
+                    <div class="blog-text-div>
                         <p class="blog-text">${item.desc}</p>
                     </div>
                     <div class="blog-link">
                     <a href="${item.link}" target="_blank" class="link">&lt Read More &gt</a>
-                    </div>
+                    </div>   
                 </div>
+                
             </div>
         </div>`;
 
