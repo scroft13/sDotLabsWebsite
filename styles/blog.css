@@ -32,6 +32,13 @@ blog
     font-size: 1.5rem;
     color: #333;
     text-align: center;
+    font-family: var(--ff-primary);
+    /* font-family: var(--ff-secondary); */
+    font-weight: 400;
+}
+.blog-text{
+    font-family: var(--ff-secondary);
+    font-weight: 250;
 }
 
 .blog-info {
@@ -65,7 +72,7 @@ blog
 
 .blog-link:hover {
     color: var(--cyan);
-    letter-spacing: var(--spacing-medium);
+    letter-spacing: var(--spacing-narrow);
 }
 
 #vs-code-theme-blog {

@@ -4,7 +4,6 @@ Fonts
 ===============
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Raleway:wght@500&display=swap');
 /*
 ===============
 Global Styles
@@ -18,6 +17,7 @@ Global Styles
 
 * {
     font-family: var(--ff-primary);
+    font-weight: 250;
     padding: 0;
     margin: 0;
 }
@@ -27,9 +27,9 @@ Global Styles
     text-decoration: none;
 }
 
-button:focus {
+/* button:focus {
     outline: 0 !important;
-}
+} */
 
 /*
 ===============

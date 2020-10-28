@@ -8,6 +8,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/47118a0994.js"
       crossorigin="anonymous"
@@ -55,8 +59,6 @@
       <section class="landing">
         <div class="video-container">
           <img class="video-container" src="bbfalls.gif" alt="bb falling" />
-          <!-- <source src="./video.mp4" type="video/mp4" />
-                <iframe class="video-container" src="https://www.youtube.com/embed/aRy4h0SIljo?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay></iframe> -->
         </div>
         <div id="title">
           <h1>
@@ -77,7 +79,7 @@
         <article class="about-container">
           <div class="about-box">
             <h3 class="about-box-title">My Story So Far...</h3>
-            <button type="button" class="about-btn">
+            <button type="button" class="about-btn" title="show more">
               <i class="fas fa-chevron-circle-down"></i>
             </button>
           </div>
@@ -95,7 +97,7 @@
         <article class="about-container">
           <div class="about-box">
             <h3 class="about-box-title">Certificates</h3>
-            <button type="button" class="about-btn">
+            <button type="button" class="about-btn" title="show more">
               <i class="fas fa-chevron-circle-down"></i>
             </button>
           </div>
@@ -163,7 +165,7 @@
               target="_blank"
               class="link btn"
             >
-              <i class="fab fa-github"></i>GitHub</a
+              <i class="fab fa-github"></i> GitHub</a
             >
           </div>
           <div class="codelink">
@@ -172,7 +174,7 @@
               target="_blank"
               class="link btn"
             >
-              <i class="fab fa-codepen"></i>CodePen</a
+              <i class="fab fa-codepen"></i> CodePen</a
             >
           </div>
         </div>
@@ -189,14 +191,29 @@
         <!-- <div class="btn-container2"></div> -->
         <!-- project container -->
         <div class="blog-center"></div>
-       
       </section>
 
       <!-- end blog section -->
 
       <!-- start contact section -->
       <section id="contact" class="contact-section">
-        <div id="random-quote"></div>
+        <div id="random-quote">
+          <button
+            type="button"
+            class="prev-quote-btn"
+            title="previous quote button"
+          >
+            <i class="fas fa-angle-double-left"></i>
+          </button>
+          <div class="quote">
+            <i class="fas fa-quote-left"></i>
+            <div class="quote-box"></div>
+            <i class="fas fa-quote-right"></i>
+          </div>
+          <button type="button" class="next-quote-btn" title="next quote">
+            <i class="fas fa-angle-double-right"></i>
+          </button>
+        </div>
         <div class="contact-section-header">
           <h2>Let's work together...</h2>
           <p>How do you want to connect?</p>
@@ -254,10 +271,10 @@
         </div>
       </footer>
       <script src="scriptSources/app.js"></script>
-      <!-- <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script> -->
-
-      <!-- <script type="module" src="scriptSources/index.js"></script> -->
+      <script src="scriptSources/about.js"></script>
+      <script src="scriptSources/projectApp.js"></script>
+      <script src="scriptSources/blog.js"></script>
+      <script src="scriptSources/contact.js"></script>
     </main>
   </body>
 </html>

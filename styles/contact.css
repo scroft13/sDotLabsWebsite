@@ -19,6 +19,34 @@ contact
     font-size: 2.5rem;
     text-shadow: 2px 2px 1px #1f1f1f;
 }
+#random-quote {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 150px;
+}
+
+.prev-quote-btn, .next-quote-btn{
+    font-size: 2.5rem;
+    background: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    color: white;
+    
+    
+}
+.prev-quote-btn{
+    margin-right: 100px;
+}
+.next-quote-btn{
+    margin-left: 100px;
+}
+.quote-box{
+    display: flex;
+}
+.quote {
+    display: flex;
+    width: 55%;
+}
 
 .contact-section-header h2 {
     font-family: var(--ff-primary);
