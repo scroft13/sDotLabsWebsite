@@ -33,6 +33,10 @@ about
 
     /* padding: 1rem 0 1rem 0; */
 }
+.strike {
+    text-decoration: line-through red;
+    -webkit-text-decoration: line-through red;
+}
 
 .about-box-title {
     color: white;
@@ -56,12 +60,13 @@ about
 }
 
 .about-text {
-    padding: 1rem 0 1.5rem 0;
+    padding: 1rem 1rem 1.5rem 1rem;
     border-top: 5px solid var(--yella);
     background: var(--light-gray);
     border-bottom-left-radius: var(--radius);
     border-bottom-right-radius: var(--radius);
     font-family: var(--ff-secondary);
+    text-align: justify;
   
 }
 
