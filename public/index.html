@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="styles/blog.css" />
     <link rel="stylesheet" href="styles/contact.css" />
     <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/modal.css" />
   </head>
 
   <body>
@@ -49,17 +50,108 @@
           <li class="nav-btn">
             <a class="link" href="#contact">contact</a>
           </li>
+          
+          <li>
+            <button id="account-btn" class="nav-btn modal-btn">Account</button>
+          </li> 
+          <li>
+            <button id="sign-up-btn" class="nav-btn modal-btn">Sign Up</button>
+          </li> 
+          <li>
+            <button id="sign-in-btn" class="modal-btn nav-btn">Sign In</button>
+          </li>
         </div>
       </ul>
     </header>
     <!-- end navbar -->
+
+    <!-- Start Sign Up Modal -->
+
+
+    <div id="signUpModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content" id="signUpContent">
+        <span class="close">&times;</span>
+        <h4 class="modal-title">Sign Up for an Account</h4>
+        <br />
+        <form id="signup-form">
+          <div class="input-field">
+            <label for="singup-email">Enter Your Email Address</label>
+            <br />
+            <input type="email" id="signup-email" placeholder="Email" required />
+            
+          </div>
+          <div class="input-field">
+            <label for="signup-password">Choose a password</label>
+            <br />
+            <input type="password" id="signup-password" placeholder="Password" required />
+            
+            
+          </div>
+          <button class="modalConfirmBtn">Sign up</button>
+        </form>
+      </div>
+      <div id="signUpConfirm" class="modal-confirm">
+        <h1 class="confirmTitle">Thanks for signing up!</h1>
+      </div>
+    </div>
+
+
+    <!-- Start Sign In Modal -->
+
+
+    <div id="signInModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content" id="signInContent">
+        <span class="close">&times;</span>
+        <h4 class="modal-title">Sign In</h4>
+        <br />
+        <form id="signin-form">
+          <div class="input-field">
+            <label for="signin-email">Email</label>
+            <br />
+            <input type="email" id="signin-email" placeholder="email" required />
+          </div>
+          <div class="input-field">
+            <label for="signin-password">Password</label>
+            <br />
+            <input type="password" id="signin-password" placeholder="password" required />
+          </div>
+          <button class="modalConfirmBtn">Sign In</button>
+        </form>
+      </div>
+      <div id="signInConfirm" class="modal-confirm">
+        <h1 class="confirmTitle">Thanks for signing in!</h1>
+      </div>
+    </div>
+    <!-- Start Account Modal -->
+
+
+    <div id="accountModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content" id="accountContent">
+        <span class="close">&times;</span>
+        <h4 class="modal-title">Account</h4>
+        <br />
+        <div id="accountContainer">
+          <h1 class="title" id="accntTitle"></h1>
+          <button class="logoutbtn" id="#logout">Sign Out</button>
+        </div>
+      </div>
+      <div id="accountConfirm" class="modal-confirm">
+        <h1 class="confirmTitle">Settings Updated!</h1>
+      </div>
+    </div>
+
+    <!-- End Modal -->
+
     <!-- start main -->
     <main id="main">
       <!-- start splashpage -->
       <section class="landing">
-        <div class="video-container">
+        <!-- <div class="video-container">
           <img class="video-container" src="bbfalls.gif" alt="bb falling" />
-        </div>
+        </div> -->
         <div id="title">
           <h1>
             sDotLabs<span
@@ -79,16 +171,31 @@
         <article class="about-container">
           <div class="about-box">
             <h3 class="about-box-title">My Story So Far...</h3>
-            
+
             <button type="button" class="about-btn" title="show more">
               <i class="fas fa-chevron-circle-down"></i>
             </button>
           </div>
           <div class="about-text" id="storysofar">
             <p>
-              Though born in Washington, my family moved to Idaho where I graduated from Rigby High School, in Rigby Idaho. With a deep desire to see the world, I was honored to have served in the U.S. Air Force as an Avionics Technician on the F-15E. After my military career, I continued to travel the country as a telecommunications technician. It was during this timeI helped build the infrastructure for Google Fiber in Provo, UT. Ever the jack of all trades, I pursued work in both the construction and remodeling markets in various roles, including siding, plumbing and carpentry. 
+              Though born in Washington, my family moved to Idaho where I
+              graduated from Rigby High School, in Rigby Idaho. With a deep
+              desire to see the world, I was honored to have served in the U.S.
+              Air Force as an Avionics Technician on the F-15E. After my
+              military career, I continued to travel the country as a
+              telecommunications technician. It was during this timeI helped
+              build the infrastructure for Google Fiber in Provo, UT. Ever the
+              jack of all trades, I pursued work in both the construction and
+              remodeling markets in various roles, including siding, plumbing
+              and carpentry.
               <br /><br />
-              Then enters the great pandemic of 2020. When I was laid off from my job, I decided that it was time to achieve my longtime goal of becoming a web developer. I have always had a passion for all things computer and technology related. I worked hard and studied from every resource that I could glean information from, and am having fun soaking up any information that I can. Along the way I have completed two certificate programs (so far) through 
+              Then enters the great pandemic of 2020. When I was laid off from
+              my job, I decided that it was time to achieve my longtime goal of
+              becoming a web developer. I have always had a passion for all
+              things computer and technology related. I worked hard and studied
+              from every resource that I could glean information from, and am
+              having fun soaking up any information that I can. Along the way I
+              have completed two certificate programs (so far) through
               <a href="www.freeCodeCamp.org/scroft13" class="link"
                 >freeCodeCamp.org.
               </a>
@@ -279,11 +386,38 @@
           <p id="copyright">&copy; sDotLabs</p>
         </div>
       </footer>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var firebaseConfig = {
+    apiKey: "AIzaSyB2QIEnB_q6siEI3avWQRvhbkjMa1uDy18",
+    authDomain: "sdotlabs.firebaseapp.com",
+    projectId: "sdotlabs",
+    storageBucket: "sdotlabs.appspot.com",
+    messagingSenderId: "961811022842",
+    appId: "1:961811022842:web:0970c6848675790f7e5a43",
+    measurementId: "G-MFLXJ15GXF"
+  };
+    firebase.initializeApp(firebaseConfig);
+    
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    // update firestore settings
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+
       <script src="scriptSources/app.js"></script>
       <script src="scriptSources/about.js"></script>
       <script src="scriptSources/projectApp.js"></script>
       <script src="scriptSources/blog.js"></script>
       <script src="scriptSources/contact.js"></script>
+      <script src="scriptSources/modal.js"></script>
+      <script src="scriptSources/auth.js"></script>
+
     </main>
   </body>
 </html>
