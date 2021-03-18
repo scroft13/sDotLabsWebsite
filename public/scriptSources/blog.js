@@ -12,7 +12,7 @@ const blogpreview = [
     desc: `A complete beginners guide to creating your own VS Code theme on the Mac OS.`,
   },
 ];
-function displayBlogItems(blogItems) {
+const displayBlogItems= (blogItems) => {
   let displayBlog = blogItems.map(function (item) {
     return `
           <div class="blog-card">

@@ -100,15 +100,4 @@ const setupProjects = (data) => {
 
 
 
-//   {
-//     title: "Random Quote Generator",
-//     category: "React",
-//     link: "https://stoic-murdock-c13ebc.netlify.app/",
-//     img: "imgs/randompreview.png",
-//     desc:
-//       "Random Quote Box, developed using Meact and the material-ui library. Pulls quote from a prefined .JSON github page.",
-//   },
-// ];
-
-
 
