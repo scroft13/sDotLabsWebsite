@@ -50,15 +50,42 @@
           <li class="nav-btn">
             <a class="link" href="#contact">contact</a>
           </li>
-          
+
           <li>
-            <button id="account-btn" class="nav-btn modal-btn">Account</button>
-          </li> 
+            <button
+              id="account-btn"
+              class="nav-btn modal-btn signed-in-links"
+              style="display: none"
+            >
+              Account
+            </button>
+          </li>
           <li>
-            <button id="sign-up-btn" class="nav-btn modal-btn">Sign Up</button>
-          </li> 
+            <button
+              id="new-project-btn"
+              class="nav-btn modal-btn signed-in-links"
+              style="display: none"
+            >
+              New Project
+            </button>
+          </li>
           <li>
-            <button id="sign-in-btn" class="modal-btn nav-btn">Sign In</button>
+            <button
+              id="sign-up-btn"
+              class="nav-btn modal-btn signedOutLinks"
+              style="display: none"
+            >
+              Sign Up
+            </button>
+          </li>
+          <li>
+            <button
+              id="sign-in-btn"
+              class="modal-btn nav-btn signedOutLinks"
+              style="display: none"
+            >
+              Sign In
+            </button>
           </li>
         </div>
       </ul>
@@ -66,7 +93,6 @@
     <!-- end navbar -->
 
     <!-- Start Sign Up Modal -->
-
 
     <div id="signUpModal" class="modal">
       <!-- Modal content -->
@@ -78,15 +104,22 @@
           <div class="input-field">
             <label for="singup-email">Enter Your Email Address</label>
             <br />
-            <input type="email" id="signup-email" placeholder="Email" required />
-            
+            <input
+              type="email"
+              id="signup-email"
+              placeholder="Email"
+              required
+            />
           </div>
           <div class="input-field">
             <label for="signup-password">Choose a password</label>
             <br />
-            <input type="password" id="signup-password" placeholder="Password" required />
-            
-            
+            <input
+              type="password"
+              id="signup-password"
+              placeholder="Password"
+              required
+            />
           </div>
           <button class="modalConfirmBtn">Sign up</button>
         </form>
@@ -96,9 +129,7 @@
       </div>
     </div>
 
-
     <!-- Start Sign In Modal -->
-
 
     <div id="signInModal" class="modal">
       <!-- Modal content -->
@@ -110,12 +141,22 @@
           <div class="input-field">
             <label for="signin-email">Email</label>
             <br />
-            <input type="email" id="signin-email" placeholder="email" required />
+            <input
+              type="email"
+              id="signin-email"
+              placeholder="email"
+              required
+            />
           </div>
           <div class="input-field">
             <label for="signin-password">Password</label>
             <br />
-            <input type="password" id="signin-password" placeholder="password" required />
+            <input
+              type="password"
+              id="signin-password"
+              placeholder="password"
+              required
+            />
           </div>
           <button class="modalConfirmBtn">Sign In</button>
         </form>
@@ -126,13 +167,14 @@
     </div>
     <!-- Start Account Modal -->
 
-
     <div id="accountModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content" id="accountContent">
         <span class="close">&times;</span>
-        <h4 class="modal-title">Account</h4>
-        <br />
+        <div id="accountData">
+          <h4 class="modal-title">Account</h4>
+          <br />
+        </div>
         <div id="accountContainer">
           <h1 class="title" id="accntTitle"></h1>
           <button class="logoutbtn" id="#logout">Sign Out</button>
@@ -140,6 +182,74 @@
       </div>
       <div id="accountConfirm" class="modal-confirm">
         <h1 class="confirmTitle">Settings Updated!</h1>
+      </div>
+    </div>
+    <!-- Start New Project Modal -->
+
+    <div id="newProjectModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content" id="newProjectContent">
+        <span class="close">&times;</span>
+        <div id="newProjectData">
+          <h4 class="modal-title">New Project</h4>
+          <br />
+        </div>
+        <form id="project-form">
+          <div class="input-field">
+            <label for="project-title">Project Title</label>
+            <br />
+            <input
+              type="text"
+              id="project-title"
+              placeholder="Project Title"
+              required
+            />
+          </div>
+          <div class="input-field">
+            <label for="project-category">Project Category</label>
+            <br />
+            <input
+              type="text"
+              id="project-category"
+              placeholder="Category"
+              required
+            />
+          </div>
+          <div class="input-field">
+            <label for="project-link">Project Link</label>
+            <br />
+            <input
+              type="text"
+              id="project-link"
+              placeholder="Link"
+              required
+            />
+          </div>
+          <div class="input-field">
+            <label for="project-img">Project Image Name/Path</label>
+            <br />
+            <input
+              type="text"
+              id="project-img"
+              placeholder="Image Name"
+              required
+            />
+          </div>
+          <div class="input-field">
+            <label for="project-desc">Project Description</label>
+            <br />
+            <input
+              type="text"
+              id="project-desc"
+              placeholder="Project Description"
+              required
+            />
+          </div>
+          <button class="modalConfirmBtn">Add Project</button>
+        </form>
+      </div>
+      <div id="projectConfirm" class="modal-confirm">
+        <h1 class="confirmTitle">Your Project Has Been Successfully Added!</h1>
       </div>
     </div>
 
@@ -387,28 +497,28 @@
         </div>
       </footer>
       <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
-  <script>
-    // Initialize Firebase
-    var firebaseConfig = {
-    apiKey: "AIzaSyB2QIEnB_q6siEI3avWQRvhbkjMa1uDy18",
-    authDomain: "sdotlabs.firebaseapp.com",
-    projectId: "sdotlabs",
-    storageBucket: "sdotlabs.appspot.com",
-    messagingSenderId: "961811022842",
-    appId: "1:961811022842:web:0970c6848675790f7e5a43",
-    measurementId: "G-MFLXJ15GXF"
-  };
-    firebase.initializeApp(firebaseConfig);
-    
-    // make auth and firestore references
-    const auth = firebase.auth();
-    const db = firebase.firestore();
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+      <script>
+        // Initialize Firebase
+        var firebaseConfig = {
+          apiKey: "AIzaSyB2QIEnB_q6siEI3avWQRvhbkjMa1uDy18",
+          authDomain: "sdotlabs.firebaseapp.com",
+          projectId: "sdotlabs",
+          storageBucket: "sdotlabs.appspot.com",
+          messagingSenderId: "961811022842",
+          appId: "1:961811022842:web:0970c6848675790f7e5a43",
+          measurementId: "G-MFLXJ15GXF",
+        };
+        firebase.initializeApp(firebaseConfig);
 
-    // update firestore settings
-    db.settings({ timestampsInSnapshots: true });
-  </script>
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+        // update firestore settings
+        db.settings({ timestampsInSnapshots: true });
+      </script>
 
       <script src="scriptSources/app.js"></script>
       <script src="scriptSources/about.js"></script>
@@ -417,7 +527,7 @@
       <script src="scriptSources/contact.js"></script>
       <script src="scriptSources/modal.js"></script>
       <script src="scriptSources/auth.js"></script>
-
+      <script src="scriptSources/index.js"></script>
     </main>
   </body>
 </html>

@@ -4,23 +4,31 @@
 
 
 auth.onAuthStateChanged(user => {
-  const accountTitle = document.querySelector("#accntTitle")
-  const accountModal = document.querySelector('#accountContent')
+  
+  
   if (user){
-    accountTitle.innerHTML = "Welcome to your account " + user.email
-    
+    setupAccount(user);
+    setupNav(user);
+  } else {
+    setupNav();
+    setupAccount();
+    console.log("not logged in`")
+   }
+})
+
+//setup nav elements
+const setupNav = (user) => {
+  const signedInLinks = document.querySelectorAll('.signed-in-links')
+  const signedOutLinks = document.querySelectorAll('.signedOutLinks')
+  if (user) {
+    signedInLinks.forEach(item => item.style.display = 'block')
+    signedOutLinks.forEach(item => item.style.display = 'none')
     
   } else {
-    accountModal.innerHTML = "Please Sign In"
+    signedInLinks.forEach(item => item.style.display = 'none')
+    signedOutLinks.forEach(item => item.style.display = 'block')
   }
-  
-  user ? (
-    
-    console.log("logged in")
-   ) : (
-    console.log("not logged in`")
-  )
-})
+}
 
 
 // signup
@@ -90,3 +98,39 @@ logout.addEventListener("click", (e) => {
   
 });
 
+
+const projectForm = document.querySelector("#project-form");
+projectForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const title = projectForm["project-title"].value;
+  const category = projectForm["project-category"].value;
+  const link = projectForm["project-link"].value;
+  const img = projectForm["project-img"].value;
+  const desc = projectForm["project-desc"].value;
+  let newProjectModal = document.getElementById("newProjectModal");
+
+  const content = document.getElementById("newProjectContent");
+  const confirm = document.getElementById("projectConfirm");
+
+  db.collection("projects").add({
+    title: title,
+    category: category,
+    link: link,
+    img: img,
+    description: desc,
+  }).then(() => {
+    content.style.display = "none";
+    confirm.style.display = "block";
+    setTimeout(() => {
+    newProjectModal.style.display = "none"
+      
+      projectForm.reset();
+    }, 3000);
+
+  }).catch(err => {
+    console.log(err.message)
+  })
+  
+  
+});
