@@ -6,14 +6,15 @@ let newProjectModal = document.getElementById("newProjectModal");
 // Get the button that opens the modal
 var btn = document.getElementById("sign-up-btn");
 var signinbtn = document.getElementById("sign-in-btn");
-const accountBtn = document.getElementById("account-btn")
+const accountBtn = document.querySelector("#account-btn")
+const mobileAccountBtn = document.querySelector("#mobile-account-btn")
 const newProjectBtn = document.getElementById("new-project-btn")
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-var span2 = document.getElementsByClassName("close")[1];
-var accountSpan = document.getElementsByClassName("close")[2];
-var newProjectSpan = document.getElementsByClassName("close")[3];
+var span = document.getElementsByClassName("close")[1];
+var span2 = document.getElementsByClassName("close")[2];
+var accountSpan = document.getElementsByClassName("close")[3];
+var newProjectSpan = document.getElementsByClassName("close")[4];
 
 
 // When the user clicks the button, open the modal 
@@ -26,6 +27,9 @@ signinbtn.onclick = function() {
 }
 
 accountBtn.onclick = function() {
+  accountModal.style.display = "block"
+}
+mobileAccountBtn.onclick = function() {
   accountModal.style.display = "block"
 }
 newProjectBtn.onclick = () => {

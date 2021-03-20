@@ -12,7 +12,7 @@ contact
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(51, 51, 51, .5);
+    background-color: #666;
     font-family: var(--ff-primary);
     border-top: 5px var(--yella) solid;
     color: white;
@@ -23,6 +23,7 @@ contact
     display: flex;
     justify-content: center;
     padding-bottom: 150px;
+    
 }
 
 .prev-quote-btn, .next-quote-btn{
@@ -31,21 +32,15 @@ contact
     border-color: transparent;
     cursor: pointer;
     color: white;
+    flex-grow: 1;
     
     
 }
-.prev-quote-btn{
-    margin-right: 100px;
-}
-.next-quote-btn{
-    margin-left: 100px;
-}
-.quote-box{
-    display: flex;
-}
+
+
 .quote {
     display: flex;
-    width: 55%;
+    /* width: 55%; */
 }
 
 .contact-section-header h2 {

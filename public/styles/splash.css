@@ -9,7 +9,8 @@ splashpage
     justify-content: center;
     height: 100vh;
     width: 100%;
-    background: rgba(51, 51, 51, 0.3);
+    /*background: rgba(51, 51, 51, 0.3);*/
+    background: #666;
 }
 
 .video-container {
@@ -40,6 +41,7 @@ splashpage
     padding: 0px 30px 10px 40px;
     border-radius: var(--radius);
     letter-spacing: var(--spacing-wide);
+    box-shadow: 0px 0px 22px 0px rgba(255, 255, 0, 1);
 
 }
 

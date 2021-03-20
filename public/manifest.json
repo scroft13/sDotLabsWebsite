@@ -1,0 +1,9 @@
+{
+    "name": "sDotLabs Development",
+    "short_name": "sdotlabs",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "The portfolio of Shaun N. Croft, founder and janitor of sDotLabs."
+
+  }

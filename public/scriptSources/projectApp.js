@@ -1,11 +1,7 @@
-db.collection("projects")
-  .onSnapshot((snapshot) => {
-    setupProjects(snapshot.docs);
-    setupButtons(snapshot.docs);
-    
-
-    
-  });
+db.collection("projects").onSnapshot((snapshot) => {
+  setupProjects(snapshot.docs);
+  setupButtons(snapshot.docs);
+});
 
 // DOM elements
 const projectContainer = document.querySelector(".project-center");
@@ -35,7 +31,8 @@ const setupButtons = (data) => {
   });
   //set buttonList to the button container
   const buttonCenter = document.querySelector(".btn-container");
-  buttonCenter.innerHTML = `
+  buttonCenter.innerHTML =
+    `
   <button class="filter-btn" type="button" data-store="All">All</button>
   ` + html;
 
@@ -48,56 +45,45 @@ const setupButtons = (data) => {
     btn.addEventListener("click", (e) => {
       //current selected category
       const category = e.currentTarget.dataset.store;
-      if (category != "All"){
+      if (category != "All") {
         //create reference to project database
-      const projectsRef = db.collection("projects")
-      //filter through the database
-      projectQuery = projectsRef.where("category", "==", category)
-        //start live listen to database and pass it in to a function as querySnapshot
-        .onSnapshot(((querySnapshot) => {
-          querySnapshot.forEach((doc) =>{
-            setupProjects(querySnapshot.docs)
-            
-          })
-        })
-        )} else {
-          setupProjects(data);
-        }
+        const projectsRef = db.collection("projects");
+        //filter through the database
+        projectQuery = projectsRef
+          .where("category", "==", category)
+          //start live listen to database and pass it in to a function as querySnapshot
+          .onSnapshot((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+              setupProjects(querySnapshot.docs);
+            });
+          });
+      } else {
+        setupProjects(data);
       }
-      
-      
-    );
-  }
-  )}
+    });
+  });
+};
 // setup project list
 const setupProjects = (data) => {
   let html = "";
   data.forEach((doc) => {
     const project = doc.data();
     const li = `
+    
     <div class="project-item">
     <img class="photo" src=${project.img} alt=${project.title}/>
+    <div class="item-container">
+    <a href="${project.link}" target="_blank" class="proj-link link">
     <div class="item-info">
-    <div class="item-info">
-      <div class="header">
-      <h4>${project.title}</h4>
-      <a href="${project.link}" target="_blank" class="proj-link link">&ltlink&gt</a>
+      <div class="header"><h4>${project.title}</h4></div>
+      <p class="item-text">${project.description}</p>
     </div>
-    <p class="item-text">
-      ${project.description}
-    </p>
-    </div>
+    </a>
     </div>
 </div>
+
     `;
     html += li;
   });
   projectContainer.innerHTML = html;
 };
-
-
-
-
-
-
-

@@ -7,7 +7,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap"
       rel="stylesheet"
@@ -16,6 +16,7 @@
       src="https://kit.fontawesome.com/47118a0994.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/nav.css" />
     <link rel="stylesheet" href="styles/splash.css" />
@@ -25,10 +26,13 @@
     <link rel="stylesheet" href="styles/contact.css" />
     <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="styles/modal.css" />
+    <link rel="stylesheet" href="styles/mobile.css" />
   </head>
 
   <body>
     <!-- start navbar -->
+
+    <!-- TODO Either a mobile menu bar or change the entire thing to a menu bar -->
     <header class="header">
       <ul class="navbar">
         <div class="logo">
@@ -53,20 +57,21 @@
 
           <li>
             <button
-              id="account-btn"
-              class="nav-btn modal-btn signed-in-links"
-              style="display: none"
-            >
-              Account
-            </button>
-          </li>
-          <li>
-            <button
               id="new-project-btn"
               class="nav-btn modal-btn signed-in-links"
               style="display: none"
             >
               New Project
+            </button>
+          </li>
+
+          <li>
+            <button
+              id="account-btn"
+              class="signed-in-links"
+              style="display: none"
+            >
+            SC
             </button>
           </li>
           <li>
@@ -88,7 +93,45 @@
             </button>
           </li>
         </div>
+        <div id="mobile-btn">
+          <div class="">
+            <button class="link" id="hamburger"><i class="fas fa-bars"></i></button>
+          </div>
+          
+        </div>
       </ul>
+      <div id="mobile-menu">
+        <span class="close" id="closeMobileNav">&times;</span>
+        <ul>
+          <li>
+            <button
+              id="mobile-account-btn"
+              class="signed-in-links account-btn"
+              style="display: none"
+            >
+            SC
+            </button>
+          </li>
+          <li>
+            <button
+              id="sign-up-btn"
+              class="nav-btn modal-btn signedOutLinks"
+              style="display: none"
+            >
+              Sign Up
+            </button>
+          </li>
+          <li>
+            <button
+              id="sign-in-btn"
+              class="modal-btn nav-btn signedOutLinks"
+              style="display: none"
+            >
+              Sign In
+            </button>
+          </li>
+        </ul>
+      </div>
     </header>
     <!-- end navbar -->
 
@@ -105,6 +148,7 @@
             <label for="singup-email">Enter Your Email Address</label>
             <br />
             <input
+              autocomplete="email"
               type="email"
               id="signup-email"
               placeholder="Email"
@@ -118,6 +162,7 @@
               type="password"
               id="signup-password"
               placeholder="Password"
+              autocomplete="current-password"
               required
             />
           </div>
@@ -145,6 +190,7 @@
               type="email"
               id="signin-email"
               placeholder="email"
+              autocomplete="email"
               required
             />
           </div>
@@ -152,6 +198,7 @@
             <label for="signin-password">Password</label>
             <br />
             <input
+            autocomplete="current-password"
               type="password"
               id="signin-password"
               placeholder="password"
@@ -422,6 +469,7 @@
       <!-- end blog section -->
 
       <!-- start contact section -->
+      <!-- TODO Wow the quotes look bad, especially on mobile devices-->
       <section id="contact" class="contact-section">
         <div id="random-quote">
           <button
@@ -528,6 +576,7 @@
       <script src="scriptSources/modal.js"></script>
       <script src="scriptSources/auth.js"></script>
       <script src="scriptSources/index.js"></script>
+      <script src="scriptSources/mobileNav.js"></script>
     </main>
   </body>
 </html>
