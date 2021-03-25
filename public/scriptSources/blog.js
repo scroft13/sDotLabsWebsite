@@ -26,9 +26,8 @@ const displayBlogItems= (blogItems) => {
                           <p class="blog-text">${item.desc}</p>
                       </div>
                       <div class="date">Written on ${item.date}</div>
-                      <div class="blog-link">
-                          
-                      <a href="${item.link}" target="_blank" class="link">&lt Read More &gt</a>
+                      <div class="blog-link"> 
+                        <a href="${item.link}" target="_blank" class="link">&lt Read More &gt</a>
                       </div>   
                   </div>
                   

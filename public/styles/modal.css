@@ -21,6 +21,7 @@ input {
   border-radius: 6px;
   font-size: 14.5px;
   text-align: center;
+  width: 50vw;
 }
 .modal-title {
   font-size: 32px;

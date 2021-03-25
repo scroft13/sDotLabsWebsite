@@ -1,77 +1,129 @@
 /*TODO: ADD mobile responsive styles */
-#mobile-menu{
-    display: none;
+#mobile-menu {
+  display: none;
 }
 #mobile-btn {
-    display: none;
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
-    .nav-btn {
-     font-size: .5rem;
-    }
-    .quote {
-     font-size: 1rem;
-    }
-
-    .links-container {
-        display: none;
-    }
-    .btn-container {
-        flex-wrap: wrap;
-    }
-    #contact{
-        font-size: 1.5rem;
-
-    }
-    .contact-details {
-        font-size: 1rem;
-    }
-    /* #mobile-menu{
-        display: block;
-    } */
-    #hamburger{
-        font-size: 2rem;
-        color: rgb(255, 255, 0);
-        background-color: #333;
-        z-index: 0;
-        box-shadow: var(--yella-shadow);
-        border-radius: 6px;
-    }
-    #mobile-btn {
-        display: block;
-    }
-
-    .photo {
-        display: none;
-    }
-
-    .project-center {
-        width: 75vw;
-    }
-    .proj-link {
-        /* letter-spacing: var(--spacing-medium); */
-        padding: 0px;
-        color: var(--dark-gray);
-      }
-      
-
-    .blog-info {
-        width: 95vw;
-    }
-    .item-info{
-        display: flex;
-        flex-direction: column;
-        background-image: "public/imgs/colorFlipPreview.png";
-        background-color: rgba(255, 255, 0, .2);
-        width: 55vw;
-        padding: 15px;
-    }
-
-    .show-text #certificates {
-        display: flex;
-        justify-content: space-around;
-        width: 90vw;
-    }
+  .nav-btn {
+    font-size: 0.5rem;
   }
 
+  #responsive-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #title h1 {
+    font-size: 1.25em;
+    letter-spacing: var(--spacing-narrow);
+  }
+  #title-logo {
+    transform: translate(0px);
+  }
+  #title-logo {
+    max-width: 100px;
+  }
+  /* responsive about */
+
+  .about-container {
+    width: 90vw;
+    padding: 0px;
+  }
+
+  .about-text {
+    padding: 0px;
+  }
+
+  .show-text #certificates {
+    flex-wrap: wrap;
+    width: 90vw;
+    min-width: 0;
+  }
+
+  .quote {
+    font-size: 1rem;
+  }
+
+  .links-container {
+    display: none;
+  }
+  .btn-container {
+    flex-wrap: wrap;
+  }
+  #contact {
+    font-size: 1.5rem;
+  }
+  .contact-details {
+    font-size: 1rem;
+  }
+  /* #mobile-menu{
+        display: block;
+    } */
+  #hamburger {
+    font-size: 2rem;
+    color: rgb(255, 255, 0);
+    background-color: #333;
+    z-index: 0;
+    box-shadow: var(--yella-shadow);
+    border-radius: 6px;
+  }
+  #mobile-btn {
+    display: block;
+    padding: 1rem;
+  }
+  .item-container {
+    max-width: fit-content;
+  }
+
+  .codelinks-container {
+    flex-wrap: wrap;
+  }
+  .fas {
+    padding: 0.5rem;
+  }
+
+  .photo {
+    display: none;
+  }
+
+  .project-center {
+    width: 75vw;
+  }
+  .proj-link {
+    /* letter-spacing: var(--spacing-medium); */
+    padding: 0px;
+    color: var(--dark-gray);
+  }
+
+  .blog-info {
+    width: 95vw;
+  }
+  .item-info {
+    display: flex;
+    flex-direction: column;
+    background-image: "public/imgs/colorFlipPreview.png";
+    background-color: rgba(255, 255, 0, 0.2);
+    width: 55vw;
+    padding: 15px;
+  }
+}
+
+
+@media screen and (min-width: 680px) and (max-width: 830px) {
+    #title h1{
+        font-size: 1.5rem;
+    }
+
+}
+@media screen and (min-width: 601px) and (max-width: 679px) {
+    #title h1{
+        font-size: 1.25rem;
+        padding: 0;
+    }
+
+}

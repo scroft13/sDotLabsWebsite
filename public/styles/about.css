@@ -82,6 +82,7 @@ about
     display: flex;
     justify-content: space-around;
     min-width: 450px;
+    text-align: center;
 }
 
 /* Hide text */

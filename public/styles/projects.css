@@ -89,18 +89,15 @@ projects
 }
 
 .project-item {
-  /* display: grid;
-    gap: 1rem 2rem; */
-  max-width: 200px;
   display: flex;
-  max-width: 200px;
+  align-items: center;
   padding: 5px;
 }
 
 .photo {
   object-fit: cover;
-  max-height: 200px;
-  max-width: 200px;
+  height: 200px;
+  width: 200px;
   border: 0.25rem solid var(--medium-gray);
   border-radius: var(--radius);
 }
@@ -144,5 +141,7 @@ projects
 }
 
 .item-container{
-    width: 300px;
+   max-width: 20vw;
+   padding-left: 10px;
+
 }

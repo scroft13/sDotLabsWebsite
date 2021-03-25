@@ -55,7 +55,7 @@ blog
     flex-direction: column;
     justify-content: space-between;
     padding-left: 25px;
-    height: 110 px;
+    height: 110px;
     overflow: hidden;
 }
 
@@ -67,8 +67,8 @@ blog
 }
 
 .blog-link {
-    align-self: flex-end;
     transition: .3s ease;
+
 }
 
 .blog-link:hover {
