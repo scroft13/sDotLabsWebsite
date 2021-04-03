@@ -22,7 +22,6 @@ const setupButtons = (data) => {
 
   //ouput array to buttonList
   uniqArray.forEach((category) => {
-    console.log(category);
     const buttonList = `
       <button class="filter-btn" type="button" data-store="${category}">${category}</button>
   

@@ -117,7 +117,7 @@ projectForm.addEventListener("submit", (e) => {
     title: title,
     category: category,
     link: link,
-    img: img,
+    img: "/imgs/" + img,
     description: desc,
   }).then(() => {
     content.style.display = "none";
